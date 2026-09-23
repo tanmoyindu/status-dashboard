@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - TARGETS=https://github.com,https://example.com
+    restart: unless-stopped
